@@ -46,7 +46,10 @@ public class DashBoard extends AppCompatActivity {
             public void onDataChange(@NonNull DataSnapshot snapshot) {
                 for(DataSnapshot ds: snapshot.getChildren())
                 {
-                    Helper helper = ds.getValue(Helper.class);
+                    String Title=""+ds.child("Title").getValue();
+                    String Content = ""+ds.child("Content").getValue();
+                    String uri = ""+ds.child("PostImageUri").getValue();
+                    Helper helper=new Helper(uri,Title,Content);
                     arrayList.add(helper);
                 }
                 recyclerView.setLayoutManager(new LinearLayoutManager(getApplicationContext()));
@@ -65,7 +68,7 @@ public class DashBoard extends AppCompatActivity {
             public void onClick(View view) {
                 Intent intent = new Intent(DashBoard.this,Post.class);
                 intent.putExtra("name",Fname);
-              startActivity(intent);
+               startActivity(intent);
             }
         });
     }

@@ -44,7 +44,8 @@ public class RecyclerList extends RecyclerView.Adapter<RecyclerList.ViewHolder>{
         String ImageUri=arrayList.get(position).getImageUri();
         holder.Title.setText(Title);
         holder.Content.setText(content);
-        Picasso.get().load(ImageUri).placeholder(R.drawable.person).into(holder.ImageView);
+        Uri st=Uri.parse(ImageUri);
+        Picasso.get().load(st).placeholder(R.drawable.person).into(holder.ImageView);
     }
 
     @Override
