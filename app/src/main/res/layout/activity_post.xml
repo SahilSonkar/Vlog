@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="20dp"
+    tools:context=".Post">
+
+<ScrollView
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/ImageP"
+            android:layout_width="match_parent"
+            android:layout_height="300dp"
+            android:src="@drawable/person2"
+            android:scaleType="fitXY"/>
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/titleP"
+            android:hint="Title of your post"
+            android:textSize="30dp"
+            android:textStyle="bold"
+            android:gravity="center"/>
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/bodyP"
+            android:hint="Content of your post"
+            android:textStyle="bold"/>
+        <Button
+            android:id="@+id/postp"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:text="Post"
+            android:textStyle="bold"
+            android:textSize="30dp"/>
+    </LinearLayout>
+
+</ScrollView>
+
+
+
+
+
+</LinearLayout>
